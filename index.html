@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NeoIn</title>
+  <link rel="shortcut icon" href="logos/icon.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  <meta property="og:title" content="NeoIn" />
+  <meta property="og:description" content="create new."/>
+  <meta property="og:image" content="logos/roundel-slogan.png"/>
+  <style>
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  </style>
+</head>
+
+<body>
+  <header class="header-wrapper">
+    <img src="logos/text.png" id="logo" class="menu" alt="NeoIn Logo"></img>
+    <div class="dropdown-content">
+      <a href="/">Home</a>
+      <a href="#">NeoCOMS</a>
+      <a href="#">NeoAD</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector(".header-wrapper").classList.add("shadow");
+      } else {
+        document.querySelector(".header-wrapper").classList.remove("shadow");
+      }
+    });
+  </script>
+  <div id="imagePlane">
+    <div class="row">
+      
+      <div class="column">
+        <div class="mySlides fade">
+          <img src="images/coms.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/coms1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/coms2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/coms3.jpg" style="width:100%">
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="mySlides1 fade">
+          <img src="images/haevin.jpg" style="width:100%">
+        </div>
+        <div class="mySlides1 fade">
+          <img src="images/haevin1.jpg" style="width:100%">
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="centered"> 
+      <h1 id="changeable">all‎ ‎ </h1>
+      <h1 style="font-family: 'Audiowide'; font-size: 100px;">in</h1>
+    </div>
+    
+    <div class="row">
+      
+      <div class="column">
+        <div class="mySlides2 fade">
+          <img src="images/neoad.jpg" style="width:100%">
+        </div>
+        <div class="mySlides2 fade">
+          <img src="images/neoad1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides2 fade">
+          <img src="images/neoad2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides2 fade">
+          <img src="images/neoad3.jpg" style="width:100%">
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="mySlides3 fade">
+          <img src="images/motors.jpg" style="width:100%">
+        </div>
+        <div class="mySlides3 fade">
+          <img src="images/motors1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides3 fade">
+          <img src="images/motors2.jpg" style="width:100%">
+        </div>
+      </div>
+      
+    </div>
+    <script>
+    let slideIndex = 0;
+      let slideIndex1 = 0;
+      let slideIndex2 = 0;
+      let slideIndex3 = 0;
+    showSlides();
+      showSlides1();
+      showSlides2();
+      showSlides3();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 2500); // Change image every 2 seconds
+    }
+      function showSlides1() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides1");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex1++;
+        if (slideIndex1 > slides.length) {slideIndex1 = 1}    
+        slides[slideIndex1-1].style.display = "block";  
+        setTimeout(showSlides1, 4000); // Change image every 2 seconds
+      }
+      function showSlides2() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides2");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex2++;
+        if (slideIndex2 > slides.length) {slideIndex2 = 1}    
+        slides[slideIndex2-1].style.display = "block";  
+        setTimeout(showSlides2, 3000); // Change image every 2 seconds
+      }
+      function showSlides3() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides3");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex3++;
+        if (slideIndex3 > slides.length) {slideIndex3 = 1}    
+        slides[slideIndex3-1].style.display = "block";  
+        setTimeout(showSlides3, 3500); // Change image every 2 seconds
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      var text = ["locked‎ ‎ ", "take it‎ ‎ ", "NEO", "let's beg", "all‎ ‎ "];
+      var counter = 0;
+      var elem = $("#changeable");
+      setInterval(change, 2000);
+      function change() {
+          elem.fadeOut(function(){
+              elem.html(text[counter]);
+              counter++;
+              if(counter >= text.length) { counter = 0; }
+              elem.fadeIn();
+          });
+      }
+    </script>
+  </div>
+  <footer>© The NeoIn Group</footer>
+</body>
+
+</html>

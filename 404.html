@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Error 404</title>
+  <link rel="shortcut icon" href="logos/icon.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  <style>
+    .rotate {
+      animation: rotation 8s infinite linear;
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header-wrapper">
+    <img src="logos/text.png" id="logo" class="menu" alt="NeoIn Logo"></img>
+    <div class="dropdown-content">
+      <a href="/">Home</a>
+      <a href="#">NeoCOMS</a>
+      <a href="#">NeoAD</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector(".header-wrapper").classList.add("shadow");
+      } else {
+        document.querySelector(".header-wrapper").classList.remove("shadow");
+      }
+    });
+  </script>
+  <div class="centered"> 
+    <h1>Error</h1>
+    <img src="logos/icon.png" class="rotate" style="width: 30vw; height: auto;"/>
+    <h1>404</h1>
+  </div>
+  <h3>Our compass can't seem to find what you're looking for.</h3>
+  <footer>© The NeoIn Group</footer>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NeoIn - About</title>
+  <link rel="shortcut icon" href="logos/icon.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  <meta property="og:title" content="NeoIn - About" />
+  <meta property="og:description" content="Who we are."/>
+  <meta property="og:image" content="logos/roundel-slogan.png"/>
+</head>
+
+<body>
+  <header class="header-wrapper">
+    <img src="logos/text.png" id="logo" class="menu" alt="NeoIn Logo"></img>
+    <div class="dropdown-content">
+      <a href="/">Home</a>
+      <a href="#">NeoCOMS</a>
+      <a href="#">NeoAD</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector(".header-wrapper").classList.add("shadow");
+      } else {
+        document.querySelector(".header-wrapper").classList.remove("shadow");
+      }
+    });
+  </script>
+  <h1>About</h1>
+  <h3 style="width: 80vw; margin: auto;">Unofficially founded in 2020, NeoIn does, well, a bit too much. From internet media to rocketry, automotive conceptual design, and game development, we've dabbled in way too many industries. If you actually do want to learn more, just visit one of our divisional sites instead. You're not going to find much from this webpage.</h3>
+  <footer>© The NeoIn Group</footer>
+</body>
+
+</html>
